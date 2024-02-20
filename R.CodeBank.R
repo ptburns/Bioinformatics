@@ -57,3 +57,11 @@ for(n in 1:15){translate(myseq, (genetic.code = GENETIC_CODE))}
 
 Alignment_phyDat <- msaConvert(aline,type="phangorn::phyDat")
 write.phyDat(Alignment_phyDat, "alignment.fasta", format = "fasta")
+
+#Second accession
+library(UniprotR)
+library(protti)
+library(r3dmol)
+BiocManager::install("GenomicAlignments")
+
+
