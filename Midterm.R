@@ -80,8 +80,9 @@ actualAA<- Biostrings::translate(homo6, genetic.code = GENETIC_CODE, no.init.cod
 print(actualAA)
 
 #I will now be saving my sequence for homo6 as a fasta file by writing the following code.
-for (i in names(actualAA))
-  +  writeXStringSet(myAAStringSet[[i]], filepath = paste("/Users/phoebeburns/Documents/GitHub/Bioinformatics",i,".fasta"), format = "fasta")
+# this code isn't working. 
+# for (i in names(actualAA))
+#   +  writeXStringSet(myAAStringSet[[i]], filepath = paste("/Users/phoebeburns/Documents/GitHub/Bioinformatics",i,".fasta"), format = "fasta")
 write.fasta(names ="actualAA", sequences=actualAA, file.out = "actualAA.fasta")  
 
 #I ran my fasta file through UniProt and recived the accesion number of A0A0J9YWK4
